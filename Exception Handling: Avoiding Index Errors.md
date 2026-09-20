@@ -1,26 +1,27 @@
-# Exception Handling in Python: Avoiding Index Errors
+# File Handling in Python: Count Lines Not Starting with 'T'
 
 ## 🎯 Aim
-To write a Python program that handles an **IndexError** when trying to access an element beyond the available range of a list.
+To write a Python program that counts the number of lines in a text file `story.txt` that do **not** start with the alphabet `'T'`.
 
 ## 🧠 Algorithm
-1. Define a list `list1` with some integer elements.
-2. Use a **try-except** block:
-   - In the `try` block, attempt to access an index that is out of range (e.g., `list1[5]`).
-   - In the `except` block, catch the error and print a custom message `"You're out of list range"`.
-3. Print the result based on whether the index access succeeds or fails.
+1. Open the file `story.txt` in **read mode**.
+2. Initialize a counter `count` to zero.
+3. Iterate through each line of the file:
+   - Check if the first character of the line is **not** `'T'`.
+   - If the line does not start with `'T'`, increment the `count` by 1.
+4. After processing all lines, print the `count` value, which represents the number of lines that do not start with `'T'`.
 
 ## 🧾 Program
 ```
-msg=[5, 10, 20]
-try:
-    print(msg[5])
-except IndexError:
-    print("You're out of list range")
+f=open("story.txt","r")
+count=0
+for lines in f:
+    if lines[0] not in "T":
+        count+=1
+    print(count)
 ```
 ## Output
-<img width="601" height="160" alt="image" src="https://github.com/user-attachments/assets/9034b93c-344b-4dc5-b2d6-10e4a5551b99" />
+<img width="463" height="183" alt="image" src="https://github.com/user-attachments/assets/59f29192-1404-4c12-9d79-d024649ea3cf" />
 
 ## Result
-Thus,the program has been executed successfully.
-
+Hence the program executed successfully!
