@@ -1,27 +1,55 @@
-## Dictionary Operations in Python: Merging Two Dictionaries
+# 🔤 Dictionary-Python Program to Sort a Dictionary by Keys and Values
+
+This Python program demonstrates how to sort a dictionary:
+- Alphabetically by keys
+- Alphabetically by values
+
+---
 
 ## 🎯 Aim
-To write a Python program that merges **two dictionaries** and combines their key-value pairs.
+
+To write a Python program that sorts a dictionary's:
+- Keys in alphabetical order
+- Values in alphabetical order
+
+---
 
 ## 🧠 Algorithm
-1. Define two dictionaries `dict1` and `dict2` with some key-value pairs.
-2. Define a function `merge()` that merges the two dictionaries using the `**` unpacking operator.
-   - The merged result will combine keys from both dictionaries. If a key exists in both, the value from `dict2` will overwrite that from `dict1`.
-3. Call the `merge()` function and print the merged dictionary.
 
-## 🧾 Program
-```
-dict1={'Ten': 10,'Twenty': 20,'Thirty': 30} 
-dict2={'Thirty': 30,'Fourty': 40,'Fifty': 50} def 
-merge (dict1,dict2): 
-res={**dict1 , **dict2} return 
-res 
-dict3=merge(dict1,dict2) 
-print(dict3)
-```
+1. **Start the program.**
+2. **Define** a dictionary with key-value pairs.
+3. **Sort by Keys**:
+   - Use `sorted(dictionary.items())`
+   - Convert the result to a dictionary using `dict()`
+4. **Sort by Values**:
+   - Use `sorted(dictionary.items(), key=lambda item: item[1])`
+   - Convert the result to a dictionary using `dict()`
+5. **Display** the original and sorted dictionaries.
+6. **End the program.**
 
-## Output
-<img width="805" height="165" alt="image" src="https://github.com/user-attachments/assets/baade0b2-0bd6-4c97-ba92-bda5c37cb98f" />
+---
+
+## 🧪Program
+```
+def dictionairy(): 
+# Declaring hash function      
+key_value ={}    
+# Initializing the value 
+key_value[2] = 56       
+key_value[1] = 2 
+key_value[5] = 12 
+key_value[4] = 24 
+key_value[6] = 18      
+key_value[3] = 323 
+print ("Keys and Values sorted", 
+"in alphabetical order by the value") 
+# Note that it will sort in lexicographical order 
+# For mathematical way, change it to float 
+print(sorted(key_value.items(), key = 
+lambda kv:(kv[1], kv[0])))
+```
+## Sample Output
+<img width="1140" height="184" alt="image" src="https://github.com/user-attachments/assets/0e8b38d3-9f2d-4488-85d7-e3a501f6efa9" />
 
 ## Result
-thus,the program has been executed successfully.
+Thus,the program has been executed successfully.
